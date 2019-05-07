@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<config>
+	<menu>
+		<faq module="faq">
+			<title>Faq</title>
+			<sort_order>100</sort_order>
+			<children>
+				<faqgrid module="faq">
+					<title>Manage Faq</title>
+					<sort_order>0</sort_order>
+					<action>*/faqgrid</action>
+				</faqgrid>
+			</children>
+		</faq>
+	</menu>
+	<acl>
+		<resources>
+			<all>
+				<title>Allow Everything</title>
+			</all>
+			<admin>
+				<children>
+					<faq translate="title" module="faq">
+						<title>Faq</title>
+						<sort_order>1000</sort_order>
+						<children>
+							<alert translate="title">
+								<title>Manage Faq</title>
+							</alert>
+						</children>
+					</faq>
+				</children>
+			</admin>
+		</resources>
+	</acl>
+</config>
